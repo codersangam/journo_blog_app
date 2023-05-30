@@ -8,6 +8,6 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: SplashRoute.page, path: "/", initial: true),
-        AutoRoute(page: OnBoardRoute.page)
+        AutoRoute(page: OnBoardRoute.page),
       ];
 }

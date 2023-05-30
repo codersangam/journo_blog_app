@@ -16,7 +16,7 @@ class _SplashState extends State<Splash> {
   }
 
   moveToOnBoard() async {
-    await Future.delayed(const Duration(seconds: 4), () {
+    await Future.delayed(const Duration(seconds: 2), () {
       AutoRouter.of(context).push(const OnBoardRoute());
     });
   }
@@ -27,11 +27,10 @@ class _SplashState extends State<Splash> {
       backgroundColor: MyColors.primaryColor,
       body: Center(
         child: FadedScaleAnimation(
-          fadeDuration: const Duration(seconds: 3),
           child: Image.asset(
-            MyAssets.journoLogo,
-            width: 139,
+            "assets/images/journo_logo.png",
             height: 42,
+            width: 139,
           ),
         ),
       ),
