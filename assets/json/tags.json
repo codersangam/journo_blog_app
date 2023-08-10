@@ -1,0 +1,83 @@
+{
+    "status": 1,
+    "tags_count": 11,
+    "tags": [
+        {
+            "id": 43,
+            "title": "okie",
+            "slug": "okie",
+            "created_at": "2022-09-01T09:45:43.000000Z",
+            "updated_at": "2023-05-09T12:18:18.000000Z"
+        },
+        {
+            "id": 44,
+            "title": "testing",
+            "slug": "testing",
+            "created_at": "2022-09-02T11:52:20.000000Z",
+            "updated_at": "2023-01-16T18:41:52.000000Z"
+        },
+        {
+            "id": 50,
+            "title": "lol",
+            "slug": "lol",
+            "created_at": "2023-01-15T17:48:19.000000Z",
+            "updated_at": "2023-01-15T17:48:19.000000Z"
+        },
+        {
+            "id": 52,
+            "title": "huss",
+            "slug": "huss",
+            "created_at": "2023-01-15T17:51:09.000000Z",
+            "updated_at": "2023-01-15T17:51:09.000000Z"
+        },
+        {
+            "id": 53,
+            "title": "lala",
+            "slug": "lala",
+            "created_at": "2023-01-15T18:00:10.000000Z",
+            "updated_at": "2023-01-15T18:00:10.000000Z"
+        },
+        {
+            "id": 54,
+            "title": "mast",
+            "slug": "mast",
+            "created_at": "2023-01-15T18:05:53.000000Z",
+            "updated_at": "2023-01-15T18:05:53.000000Z"
+        },
+        {
+            "id": 55,
+            "title": "haha",
+            "slug": "haha",
+            "created_at": "2023-01-15T18:16:51.000000Z",
+            "updated_at": "2023-01-15T18:16:51.000000Z"
+        },
+        {
+            "id": 56,
+            "title": "entertainments",
+            "slug": "entertainments",
+            "created_at": "2023-01-16T17:57:02.000000Z",
+            "updated_at": "2023-05-07T16:43:39.000000Z"
+        },
+        {
+            "id": 60,
+            "title": "mytag",
+            "slug": "mytag",
+            "created_at": "2023-05-07T16:45:18.000000Z",
+            "updated_at": "2023-05-07T16:45:18.000000Z"
+        },
+        {
+            "id": 61,
+            "title": "newtagsnow",
+            "slug": "newtagsnow",
+            "created_at": "2023-07-17T14:15:28.000000Z",
+            "updated_at": "2023-07-17T14:15:28.000000Z"
+        },
+        {
+            "id": 62,
+            "title": "rednewtag",
+            "slug": "rednewtag",
+            "created_at": "2023-07-17T14:16:13.000000Z",
+            "updated_at": "2023-07-17T14:16:13.000000Z"
+        }
+    ]
+}

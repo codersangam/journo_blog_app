@@ -22,12 +22,12 @@ class _OnBoardState extends State<OnBoard> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets/images/journo_logo.png",
+                  MyAssets.assetsImagesJournoLogo,
                   color: MyColors.primaryColor,
-                  height: 42,
-                  width: 139,
+                  height: 42.h,
+                  width: 139.w,
                 ),
-                63.heightBox,
+                63.h.heightBox,
                 PageView(
                   controller: onBoardViewModel.pageController,
                   children: const [
@@ -36,29 +36,21 @@ class _OnBoardState extends State<OnBoard> {
                     OnBoardThird(),
                   ],
                 ).expand(),
-                61.heightBox,
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: MyColors.primaryColor,
-                      minimumSize: Size(MediaQuery.of(context).size.width, 44),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(11),
-                      )),
-                  child: "Get Started"
-                      .text
-                      .size(16)
-                      .fontWeight(FontWeight.w700)
-                      .make(),
+                61.h.heightBox,
+                PrimaryButton(
+                  title: "Get Started",
+                  onPressed: () => AutoRouter.of(context).push(
+                    const AuthRoute(),
+                  ),
                 ),
-                const SizedBox(height: 61),
+                SizedBox(height: 61.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     "Skip"
                         .text
                         .color(MyColors.primaryColor)
-                        .size(16)
+                        .size(16.sp)
                         .fontWeight(FontWeight.w700)
                         .make(),
                     SmoothPageIndicator(
@@ -75,7 +67,7 @@ class _OnBoardState extends State<OnBoard> {
                     "Next"
                         .text
                         .color(MyColors.primaryColor)
-                        .size(16)
+                        .size(16.sp)
                         .fontWeight(FontWeight.w700)
                         .make(),
                   ],
