@@ -43,6 +43,7 @@ class _OnBoardState extends State<OnBoard> {
                     const AuthRoute(),
                   ),
                 ),
+                10.h.heightBox,
                 SizedBox(height: 61.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
