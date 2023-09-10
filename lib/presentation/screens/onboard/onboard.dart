@@ -39,7 +39,7 @@ class _OnBoardState extends State<OnBoard> {
                 61.h.heightBox,
                 PrimaryButton(
                   title: "Get Started",
-                  onPressed: () => AutoRouter.of(context).push(
+                  onPressed: () => AutoRouter.of(context).popAndPush(
                     const AuthRoute(),
                   ),
                 ),

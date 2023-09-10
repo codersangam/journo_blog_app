@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
+import '../../../utils/utils.dart';
 import 'api_constant.dart';
 import 'api_exception.dart';
 
@@ -41,12 +42,11 @@ class ApiClient {
   }
 
   /// POST REQUEST
-  Future<Response> postRequest(
-      {required String path, required dynamic body}) async {
+  Future<Response> postRequest({required String path, dynamic body}) async {
+    var token = await Utils.getToken();
+
     final options = Options(
-      headers: {
-        "Authorization": "Bearer 94|FpclncSZVzkbOQEUCz8GbWkkza3nE5P3oPQgPKKV"
-      },
+      headers: {"Authorization": "Bearer $token"},
     );
 
     try {
