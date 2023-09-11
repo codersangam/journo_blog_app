@@ -5,7 +5,6 @@ import 'package:journo_blog_app/core/constants/my_assets.dart';
 import 'package:journo_blog_app/core/constants/my_colors.dart';
 import 'package:journo_blog_app/presentation/common_widgets/common_widget_imports.dart';
 import 'package:journo_blog_app/presentation/screens/onboard/onboard_view_model.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:velocity_x/velocity_x.dart';
 
