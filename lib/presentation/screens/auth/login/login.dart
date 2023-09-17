@@ -115,14 +115,20 @@ class _LoginState extends State<Login> {
                           ],
                         ),
                         40.h.heightBox,
-                        PrimaryButton(
-                            title: "Login",
-                            onPressed: () {
-                              if (loginViewModel.formKey.currentState!
-                                  .validate()) {
-                                loginViewModel.login(context);
-                              }
-                            }),
+                        BlocBuilder<VelocityBloc<bool>, VelocityState<bool>>(
+                          bloc: loginViewModel.isLoadingBloc,
+                          builder: (context, state) {
+                            return PrimaryButton(
+                                title: "Login",
+                                isLoading: state.data,
+                                onPressed: () {
+                                  if (loginViewModel.formKey.currentState!
+                                      .validate()) {
+                                    loginViewModel.login(context);
+                                  }
+                                });
+                          },
+                        ),
                         20.h.heightBox,
                         "Don’t have an account"
                             .richText

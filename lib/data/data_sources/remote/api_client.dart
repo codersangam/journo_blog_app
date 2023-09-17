@@ -24,7 +24,7 @@ class ApiClient {
       var response = await dio.get(path);
       debugPrint("🔥============API RESPONSE============🔥");
       debugPrint("Status Code: ${response.statusCode}");
-      log("DATA: ${response.data}");
+      log("DATA: ${response.data.toString().substring(0, 300)}");
       return response;
     } on DioException catch (e) {
       if (e.response != null) {

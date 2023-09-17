@@ -8,6 +8,7 @@ import 'package:journo_blog_app/core/constants/my_colors.dart';
 import 'package:journo_blog_app/data/repositories/repository.dart';
 import 'package:journo_blog_app/presentation/common_widgets/common_widget_imports.dart';
 import 'package:journo_blog_app/utils/validations.dart';
+import 'package:velocity_bloc/velocity_bloc.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../../../core/constants/my_assets.dart';
