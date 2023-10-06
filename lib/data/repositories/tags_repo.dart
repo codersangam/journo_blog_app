@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:journo_blog_app/data/models/message_model.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../presentation/screens/general/tags/tags_model.dart';
@@ -23,5 +24,40 @@ class TagsRepo extends ApiClient {
       TagsModel();
     }
     return TagsModel();
+  }
+
+  Future<MessageModel> addNewTags(String title, String slug) async {
+    Map body = {"title": title, "slug": slug};
+    try {
+      final response = await postRequest(
+          path: ApiEndpointUrls.addTags, body: body, isTokenRequired: true);
+      if (response.statusCode == 200) {
+        final responseData = messageModelFromJson(jsonEncode(response.data));
+        return responseData;
+      } else {
+        MessageModel();
+      }
+    } on Exception catch (e) {
+      Vx.log(e);
+      MessageModel();
+    }
+    return MessageModel();
+  }
+
+  Future<MessageModel> deleteTags(String id) async {
+    try {
+      final response = await postRequest(
+          path: "${ApiEndpointUrls.deleteTags}/$id", isTokenRequired: true);
+      if (response.statusCode == 200) {
+        final responseData = messageModelFromJson(jsonEncode(response.data));
+        return responseData;
+      } else {
+        MessageModel();
+      }
+    } on Exception catch (e) {
+      Vx.log(e);
+      MessageModel();
+    }
+    return MessageModel();
   }
 }

@@ -1,5 +1,6 @@
 part of 'tags_imports.dart';
 
+@RoutePage()
 class Tags extends StatefulWidget {
   const Tags({super.key});
 
@@ -21,11 +22,12 @@ class _TagsState extends State<Tags> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: MyColors.primaryColor,
         title: "Tags".text.size(16).make(),
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () => tagsViewModel.gotoAddTags(context),
             icon: const Icon(FeatherIcons.plus),
           ),
         ],
@@ -59,7 +61,8 @@ class _TagsState extends State<Tags> {
                             ),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () => tagsViewModel.deleteTags(
+                                context, tagsData.id.toString(), index),
                             icon: const Icon(
                               FeatherIcons.trash,
                               color: Colors.red,
