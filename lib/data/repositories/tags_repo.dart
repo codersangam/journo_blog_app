@@ -44,6 +44,24 @@ class TagsRepo extends ApiClient {
     return MessageModel();
   }
 
+  Future<MessageModel> updateTags(String id, String title, String slug) async {
+    Map body = {"id": id, "title": title, "slug": slug};
+    try {
+      final response = await postRequest(
+          path: ApiEndpointUrls.updateTags, body: body, isTokenRequired: true);
+      if (response.statusCode == 200) {
+        final responseData = messageModelFromJson(jsonEncode(response.data));
+        return responseData;
+      } else {
+        MessageModel();
+      }
+    } on Exception catch (e) {
+      Vx.log(e);
+      MessageModel();
+    }
+    return MessageModel();
+  }
+
   Future<MessageModel> deleteTags(String id) async {
     try {
       final response = await postRequest(

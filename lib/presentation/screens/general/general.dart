@@ -45,7 +45,10 @@ class _GeneralState extends State<General> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages.elementAt(visit),
+      body: IndexedStack(
+        index: visit,
+        children: pages,
+      ),
       bottomNavigationBar: BottomBarCreative(
         items: items,
         backgroundColor: Colors.white,

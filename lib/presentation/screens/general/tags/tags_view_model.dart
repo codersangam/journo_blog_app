@@ -22,6 +22,14 @@ class TagsViewModel {
     }
   }
 
+  gotoUpdateTags(context, Tag tag) async {
+    var updatedData =
+        await AutoRouter.of(context).push<TagsModel>(UpdateTagsRoute(tag: tag));
+    if (updatedData != null) {
+      tagsModelBloc.onUpdateData(updatedData);
+    }
+  }
+
   deleteTags(context, String id, int index) async {
     var data = await repository.tagsRepo.deleteTags(id);
     if (data.status == 1) {

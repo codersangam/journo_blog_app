@@ -54,7 +54,8 @@ class _TagsState extends State<Tags> {
                       child: Row(
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () =>
+                                tagsViewModel.gotoUpdateTags(context, tagsData),
                             icon: const Icon(
                               FeatherIcons.edit2,
                               color: Colors.green,
