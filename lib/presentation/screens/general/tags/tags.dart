@@ -12,7 +12,6 @@ class _TagsState extends State<Tags> {
   late TagsViewModel tagsViewModel;
   @override
   void initState() {
-    TagsRepo().getAllTags();
     tagsViewModel = TagsViewModel(repository: context.read<Repository>());
     tagsViewModel.fetchAllTags();
     super.initState();

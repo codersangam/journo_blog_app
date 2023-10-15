@@ -2,7 +2,6 @@ class ApiEndpointUrls {
   ApiEndpointUrls._();
 
   static const String posts = "posts";
-  static const String categories = "categories";
   static const String userPosts = "user-posts";
 
   // Tags Endpoint Urls
@@ -10,6 +9,12 @@ class ApiEndpointUrls {
   static const String addTags = "add-tags";
   static const String deleteTags = "delete-tags";
   static const String updateTags = "update-tags";
+
+  // Categories Endpoint Urls
+  static const String categories = "categories";
+  static const String addCategories = "add-categories";
+  static const String deleteCategories = "delete-categories";
+  static const String updateCategories = "update-categories";
 
   // Auth Endpoint Urls
   static const String login = "login";
