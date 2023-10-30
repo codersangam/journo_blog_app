@@ -1,7 +1,10 @@
 part of 'categories_imports.dart';
 
+@RoutePage<Category>()
 class Categories extends StatefulWidget {
-  const Categories({super.key});
+  const Categories({super.key, required this.navigateType});
+
+  final NavigateType navigateType;
 
   @override
   State<Categories> createState() => _CategoriesState();
@@ -23,7 +26,8 @@ class _CategoriesState extends State<Categories> {
       appBar: AppBar(
         backgroundColor: MyColors.primaryColor,
         title: "Categories".text.size(16).make(),
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading:
+            NavigateType.outer == widget.navigateType ? false : true,
         actions: [
           IconButton(
             onPressed: () => categoriesViewModel.gotoAddCategories(context),
@@ -73,6 +77,12 @@ class _CategoriesState extends State<Categories> {
                         ],
                       ),
                     ),
+                    onTap: () {
+                      NavigateType.outer == widget.navigateType
+                          ? null
+                          : AutoRouter.of(context)
+                              .pop<Category>(categoriesData);
+                    },
                   ),
                 );
               },

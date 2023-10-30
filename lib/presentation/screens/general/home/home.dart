@@ -107,7 +107,7 @@ class _HomeState extends State<Home> {
                                           .timeAgo()
                                           .toString()
                                           .text
-                                          .size(16)
+                                          .size(14)
                                           .make(),
                                     ],
                                   ),

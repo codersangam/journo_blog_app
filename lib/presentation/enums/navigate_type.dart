@@ -1,0 +1,1 @@
+enum NavigateType { inner, outer }

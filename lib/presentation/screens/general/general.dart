@@ -36,9 +36,13 @@ class _GeneralState extends State<General> {
 
   List<Widget> pages = [
     const Home(),
-    const Categories(),
+    const Categories(
+      navigateType: NavigateType.outer,
+    ),
     const AddPosts(),
-    const Tags(),
+    const Tags(
+      navigateType: NavigateType.outer,
+    ),
     const Profile(),
   ];
 

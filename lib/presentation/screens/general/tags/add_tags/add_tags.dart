@@ -18,6 +18,12 @@ class _AddTagsState extends State<AddTags> {
   }
 
   @override
+  void dispose() {
+    addTagsViewModel.textEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
