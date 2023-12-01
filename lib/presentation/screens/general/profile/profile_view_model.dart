@@ -7,9 +7,14 @@ class ProfileViewModel {
   final VelocityBloc<ProfileModel> profileModelBloc =
       VelocityBloc<ProfileModel>(ProfileModel());
 
-  getUserProfileData() async {
+  getUserProfileData(BuildContext context) async {
     var userProfileData = await repository.postsRepo.getUserPosts();
     if (userProfileData.status == 1) {
+      if (context.mounted) {
+        context
+            .read<VelocityBloc<ProfileModel>>()
+            .onUpdateData(userProfileData);
+      }
       profileModelBloc.onUpdateData(userProfileData);
     }
   }

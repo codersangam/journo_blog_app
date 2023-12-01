@@ -36,7 +36,16 @@ class _AddPostsState extends State<AddPosts> {
             bloc: addPostsViewModel.isLoadingBloc,
             builder: (context, state) {
               return IconButton(
-                onPressed: () => addPostsViewModel.addPost(context),
+                onPressed: () => addPostsViewModel.addPost(
+                  context,
+                  context
+                      .read<VelocityBloc<ProfileModel>>()
+                      .state
+                      .data
+                      .userDetails!
+                      .id
+                      .toString(),
+                ),
                 icon: state.data == true
                     ? const CircularProgressIndicator.adaptive(
                         backgroundColor: Colors.white,

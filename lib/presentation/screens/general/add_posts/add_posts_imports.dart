@@ -9,6 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:journo_blog_app/data/repositories/repository.dart';
 import 'package:journo_blog_app/presentation/enums/navigate_type.dart';
 import 'package:journo_blog_app/presentation/router/router_imports.gr.dart';
+import 'package:journo_blog_app/presentation/screens/general/profile/profile_model.dart';
 import 'package:journo_blog_app/presentation/screens/general/tags/tags_model.dart';
 import 'package:velocity_bloc/velocity_bloc.dart';
 import 'package:velocity_x/velocity_x.dart';

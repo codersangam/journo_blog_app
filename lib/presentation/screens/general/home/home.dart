@@ -32,6 +32,28 @@ class _HomeState extends State<Home> {
               return SingleChildScrollView(
                 child: Column(
                   children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        "Hello ${context.read<VelocityBloc<ProfileModel>>().state.data.userDetails!.name}"
+                            .text
+                            .bold
+                            .xl
+                            .make(),
+                        CachedNetworkImage(
+                          imageUrl: context
+                              .read<VelocityBloc<ProfileModel>>()
+                              .state
+                              .data
+                              .userDetails!
+                              .profilePhotoUrl
+                              .toString(),
+                          height: 60,
+                          width: 60,
+                        ),
+                      ],
+                    ).pSymmetric(h: 16),
+                    40.verticalSpace,
                     VxSwiper.builder(
                       autoPlay: true,
                       enlargeCenterPage: true,

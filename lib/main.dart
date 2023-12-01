@@ -6,6 +6,8 @@ import 'package:journo_blog_app/data/repositories/auth_repo.dart';
 import 'package:journo_blog_app/data/repositories/categories_repo.dart';
 import 'package:journo_blog_app/data/repositories/posts_repo.dart';
 import 'package:journo_blog_app/data/repositories/tags_repo.dart';
+import 'package:journo_blog_app/presentation/screens/general/profile/profile_model.dart';
+import 'package:velocity_bloc/velocity_bloc.dart';
 import 'core/themes/app_themes.dart';
 import 'data/repositories/repository.dart';
 import 'presentation/router/router_imports.dart';
@@ -34,11 +36,14 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         useInheritedMediaQuery: true,
         builder: (context, child) {
-          return MaterialApp.router(
-            title: MyStrings.appName,
-            theme: AppThemes.light,
-            darkTheme: AppThemes.dark,
-            routerConfig: _appRouter.config(),
+          return BlocProvider(
+            create: (context) => VelocityBloc<ProfileModel>(ProfileModel()),
+            child: MaterialApp.router(
+              title: MyStrings.appName,
+              theme: AppThemes.light,
+              darkTheme: AppThemes.dark,
+              routerConfig: _appRouter.config(),
+            ),
           );
         });
   }

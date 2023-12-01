@@ -32,7 +32,7 @@ class AddPostsViewModel {
     _controller.clear();
   }
 
-  addPost(context) async {
+  addPost(context, String userId) async {
     isLoadingBloc.onUpdateData(true);
     var data = await repository.postsRepo.addNewPost(
         textEditingController.text,
@@ -40,7 +40,7 @@ class AddPostsViewModel {
         selectedCategoryBloc.state.data!.id.toString(),
         selectedTagBloc.state.data!.id.toString(),
         _controller.document.toPlainText(),
-        "1",
+        userId,
         selectedImageBloc.state.data!.path,
         selectedImageBloc.state.data!.path.split("/").last);
 
