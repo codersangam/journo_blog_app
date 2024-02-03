@@ -101,7 +101,7 @@ class _LoginState extends State<Login> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             SizedBox(
-                              width: 250,
+                              width: 200,
                               child: CheckboxListTile(
                                 contentPadding: EdgeInsets.zero,
                                 value: false,
@@ -140,7 +140,7 @@ class _LoginState extends State<Login> {
                               text: " Sign Up",
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () => AutoRouter.of(context)
-                                    .push(const RegisterRoute()),
+                                    .replace(const RegisterRoute()),
                               style:
                                   const TextStyle(fontWeight: FontWeight.w700)),
                         ]).makeCentered(),

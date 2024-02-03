@@ -166,12 +166,22 @@ class _AddPostsState extends State<AddPosts> {
             },
           ),
           20.h.heightBox,
-          QuillToolbar.basic(controller: addPostsViewModel._controller),
-          SizedBox(
-            height: 500,
-            child: QuillEditor.basic(
+          QuillProvider(
+            configurations: QuillConfigurations(
               controller: addPostsViewModel._controller,
-              readOnly: false,
+            ),
+            child: SizedBox(
+              height: 500,
+              child: Column(
+                children: [
+                  const QuillToolbar(),
+                  QuillEditor.basic(
+                    configurations: const QuillEditorConfigurations(
+                      readOnly: false,
+                    ),
+                  ),
+                ],
+              ),
             ),
           )
         ],

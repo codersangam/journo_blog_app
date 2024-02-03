@@ -86,7 +86,7 @@ class _RegisterState extends State<Register> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             SizedBox(
-                              width: 250,
+                              width: 200,
                               child: CheckboxListTile(
                                 contentPadding: EdgeInsets.zero,
                                 value: false,
@@ -115,7 +115,7 @@ class _RegisterState extends State<Register> {
                               text: " Login",
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () => AutoRouter.of(context)
-                                    .push(const LoginRoute()),
+                                    .replace(const LoginRoute()),
                               style:
                                   const TextStyle(fontWeight: FontWeight.w700)),
                         ]).makeCentered(),

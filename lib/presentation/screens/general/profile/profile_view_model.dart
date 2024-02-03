@@ -24,7 +24,7 @@ class ProfileViewModel {
     if (data.message.isNotEmptyAndNotNull) {
       Utils.clearAllSavedData();
       VxToast.show(context, msg: data.message.toString());
-      AutoRouter.of(context).push(const AuthRoute());
+      AutoRouter.of(context).replace(const OnBoardRoute());
     }
   }
 }
