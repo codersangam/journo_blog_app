@@ -44,6 +44,5 @@
 
 # Support
 <a href="https://www.buymeacoffee.com/codersangam" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> <a href="
-https://ko-fi.com/codersangam" target="_blank"><img src="
-https://storage.ko-fi.com/cdn/brandasset/kofi_s_tag_dark.png?_gl=1*1t3avss*_ga*MTYyMTAwNzg0NS4xNzEwOTM5MTAx*_ga_M13FZ7VQ2C*MTcxMTI2NTE1Ni4zLjEuMTcxMTI2NTMzMC41NS4wLjA." alt="Buy Me A Coffee" style="height: 62px !important;width: 160px !important;" ></a>
+https://ko-fi.com/codersangam" target="_blank"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_s_tag_dark.png" alt="Buy Me A Coffee" style="height: 62px !important;width: 160px !important;" ></a>
 
