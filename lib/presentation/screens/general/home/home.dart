@@ -60,10 +60,7 @@ class _HomeState extends State<Home> {
                       itemCount: state.data.popularPosts!.length,
                       itemBuilder: ((context, index) {
                         var latestPosts = state.data.popularPosts![index];
-                        var imagePath = latestPosts.featuredimage
-                            .toString()
-                            .prepend("https://techblog.codersangam.com/")
-                            .replaceAll("public", "storage");
+                        var imagePath = latestPosts.featuredimage.toString();
                         return CachedNetworkImage(
                           imageUrl: imagePath,
                           fit: BoxFit.cover,
@@ -88,10 +85,7 @@ class _HomeState extends State<Home> {
                           SizedBox(height: 20.h),
                       itemBuilder: (context, index) {
                         var latestPosts = state.data.allPosts![index];
-                        var imagePath = latestPosts.featuredimage
-                            .toString()
-                            .prepend("https://techblog.codersangam.com/")
-                            .replaceAll("public", "storage");
+                        var imagePath = latestPosts.featuredimage.toString();
                         return FadedScaleAnimation(
                           child: Row(
                             children: [
