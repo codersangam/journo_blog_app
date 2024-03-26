@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:i18n_extension/i18n_extension.dart';
 import 'package:journo_blog_app/core/constants/my_strings.dart';
 import 'package:journo_blog_app/data/repositories/auth_repo.dart';
 import 'package:journo_blog_app/data/repositories/categories_repo.dart';
@@ -13,15 +15,20 @@ import 'data/repositories/repository.dart';
 import 'presentation/router/router_imports.dart';
 
 void main() {
-  runApp(RepositoryProvider(
-    create: (context) => Repository(
-      tagsRepo: TagsRepo(),
-      categoriesRepo: CategoriesRepo(),
-      authRepo: AuthRepo(),
-      postsRepo: PostsRepo(),
+  runApp(
+    RepositoryProvider(
+      create: (context) => Repository(
+        tagsRepo: TagsRepo(),
+        categoriesRepo: CategoriesRepo(),
+        authRepo: AuthRepo(),
+        postsRepo: PostsRepo(),
+      ),
+      child: I18n(
+        initialLocale: const Locale('en', 'US'),
+        child: MyApp(),
+      ),
     ),
-    child: MyApp(),
-  ));
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -43,6 +50,17 @@ class MyApp extends StatelessWidget {
               theme: AppThemes.light,
               darkTheme: AppThemes.dark,
               routerConfig: _appRouter.config(),
+              localizationsDelegates: const [
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: const [
+                Locale('en', 'US'),
+                Locale('ne', 'NP'),
+                Locale('hi', 'IN'),
+                Locale('ar', 'AE'),
+              ],
             ),
           );
         });
