@@ -20,6 +20,27 @@ class _OnBoardState extends State<OnBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Image.asset(
+          MyAssets.assetsImagesJournoLogo,
+          color: MyColors.primaryColor,
+          height: 42.h,
+          width: 139.w,
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              AutoRouter.of(context).push(const LanguageRoute());
+            },
+            icon: const Icon(
+              FeatherIcons.globe,
+              color: Colors.black,
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -28,12 +49,6 @@ class _OnBoardState extends State<OnBoard> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  MyAssets.assetsImagesJournoLogo,
-                  color: MyColors.primaryColor,
-                  height: 42.h,
-                  width: 139.w,
-                ),
                 63.h.heightBox,
                 PageView(
                   controller: onBoardViewModel.pageController,

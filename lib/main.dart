@@ -13,8 +13,11 @@ import 'package:velocity_bloc/velocity_bloc.dart';
 import 'core/themes/app_themes.dart';
 import 'data/repositories/repository.dart';
 import 'presentation/router/router_imports.dart';
+import 'utils/utils.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  var initialLocale = await Utils.getLocale();
   runApp(
     RepositoryProvider(
       create: (context) => Repository(
@@ -24,7 +27,7 @@ void main() {
         postsRepo: PostsRepo(),
       ),
       child: I18n(
-        initialLocale: const Locale('en', 'US'),
+        initialLocale: initialLocale,
         child: MyApp(),
       ),
     ),
