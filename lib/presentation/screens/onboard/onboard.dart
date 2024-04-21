@@ -71,6 +71,7 @@ class _OnBoardState extends State<OnBoard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     "Skip"
+                        .i18n
                         .text
                         .color(MyColors.primaryColor)
                         .size(16.sp)
@@ -88,6 +89,7 @@ class _OnBoardState extends State<OnBoard> {
                       onDotClicked: (index) {},
                     ),
                     "Next"
+                        .i18n
                         .text
                         .color(MyColors.primaryColor)
                         .size(16.sp)

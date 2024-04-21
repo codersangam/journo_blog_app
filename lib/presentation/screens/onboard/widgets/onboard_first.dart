@@ -15,6 +15,7 @@ class OnBoardFirst extends StatelessWidget {
           width: 333.w,
         ),
         "Discover, engage and read the latest articles oras well as share your own thoughts and ideas with the community"
+            .i18n
             .text
             .size(15.sp)
             .align(TextAlign.center)
