@@ -29,6 +29,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   i18n_extension: ^11.0.12
+  equatable: ^2.0.5
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -12,6 +12,7 @@ import 'package:journo_blog_app/presentation/screens/general/profile/profile_mod
 import 'package:velocity_bloc/velocity_bloc.dart';
 import 'core/themes/app_themes.dart';
 import 'data/repositories/repository.dart';
+import 'presentation/blocs/bloc/language_bloc.dart';
 import 'presentation/router/router_imports.dart';
 import 'utils/utils.dart';
 
@@ -46,24 +47,36 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         useInheritedMediaQuery: true,
         builder: (context, child) {
-          return BlocProvider(
-            create: (context) => VelocityBloc<ProfileModel>(ProfileModel()),
-            child: MaterialApp.router(
-              title: MyStrings.appName,
-              theme: AppThemes.light,
-              darkTheme: AppThemes.dark,
-              routerConfig: _appRouter.config(),
-              localizationsDelegates: const [
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: const [
-                Locale('en', 'US'),
-                Locale('ne', 'NP'),
-                Locale('hi', 'IN'),
-                Locale('ar', 'AE'),
-              ],
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => VelocityBloc<ProfileModel>(ProfileModel()),
+              ),
+              BlocProvider(
+                create: (context) => LanguageBloc(),
+              ),
+            ],
+            child: BlocBuilder<LanguageBloc, LanguageState>(
+              builder: (context, state) {
+                return MaterialApp.router(
+                  locale: state.locale,
+                  title: MyStrings.appName,
+                  theme: AppThemes.light,
+                  darkTheme: AppThemes.dark,
+                  routerConfig: _appRouter.config(),
+                  localizationsDelegates: const [
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                  ],
+                  supportedLocales: const [
+                    Locale('en', 'US'),
+                    Locale('ne', 'NP'),
+                    Locale('hi', 'IN'),
+                    Locale('ar', 'AE'),
+                  ],
+                );
+              },
             ),
           );
         });
