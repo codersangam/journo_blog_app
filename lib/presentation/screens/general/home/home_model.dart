@@ -51,15 +51,15 @@ class Post {
   String? about;
   DateTime? createdAt;
   DateTime? updatedAt;
-  String? userId;
+  int? userId;
   String? title;
   String? slug;
   String? featuredimage;
   String? body;
-  String? status;
+  int? status;
   dynamic like;
   dynamic dislike;
-  String? views;
+  int? views;
   String? profilePhotoUrl;
 
   Post({

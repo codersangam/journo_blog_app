@@ -26,6 +26,9 @@ class _LanguageState extends State<Language> {
               onChanged: (value) {
                 Utils.saveLocale(langData.locale);
                 I18n.of(context).locale = langData.locale;
+                context
+                    .read<LanguageBloc>()
+                    .add(ChooseLanguageEvent(langData.locale));
               },
             ),
           );

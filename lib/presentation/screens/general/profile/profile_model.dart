@@ -45,15 +45,15 @@ class ProfileModel {
 
 class Post {
   int? id;
-  String? userId;
+  int? userId;
   String? title;
   String? slug;
   String? featuredimage;
   String? body;
-  String? status;
+  int? status;
   dynamic like;
   dynamic dislike;
-  String? views;
+  int? views;
   DateTime? createdAt;
   DateTime? updatedAt;
 

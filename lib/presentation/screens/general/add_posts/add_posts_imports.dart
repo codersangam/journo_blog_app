@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:i18n_extension/i18n_extension.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:journo_blog_app/data/repositories/repository.dart';
 import 'package:journo_blog_app/presentation/enums/navigate_type.dart';

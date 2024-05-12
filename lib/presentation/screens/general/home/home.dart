@@ -35,7 +35,11 @@ class _HomeState extends State<Home> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        "Hello ${context.read<VelocityBloc<ProfileModel>>().state.data.userDetails!.name}"
+                        "Hello %s"
+                            .i18n
+                            .fill([
+                              '${context.read<VelocityBloc<ProfileModel>>().state.data.userDetails!.name}'
+                            ])
                             .text
                             .bold
                             .xl

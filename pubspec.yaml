@@ -16,7 +16,7 @@ dependencies:
   auto_route: ^7.8.4
   google_fonts: ^6.1.0
   dio: ^5.4.0
-  flutter_quill: ^8.6.4
+  flutter_quill: ^9.3.11
   smooth_page_indicator: ^1.1.0
   cached_network_image: ^3.3.0
   flutter_widget_from_html_core: ^0.14.9
@@ -29,6 +29,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   i18n_extension: ^11.0.12
+  equatable: ^2.0.5
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -26,6 +26,10 @@ class _ProfileState extends State<Profile> {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
+            onPressed: () => AutoRouter.of(context).push(const LanguageRoute()),
+            icon: const Icon(FeatherIcons.globe),
+          ),
+          IconButton(
             onPressed: () => profileViewModel.logout(context),
             icon: const Icon(FeatherIcons.logOut).pOnly(right: 10),
           ),
