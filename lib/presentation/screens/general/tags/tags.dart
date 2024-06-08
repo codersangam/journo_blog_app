@@ -77,7 +77,7 @@ class _TagsState extends State<Tags> {
                     onTap: () {
                       NavigateType.outer == widget.navigateType
                           ? null
-                          : AutoRouter.of(context).pop<Tag>(tagsData);
+                          : AutoRouter.of(context).maybePop<Tag>(tagsData);
                     },
                   ),
                 );

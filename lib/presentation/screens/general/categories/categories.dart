@@ -81,7 +81,7 @@ class _CategoriesState extends State<Categories> {
                       NavigateType.outer == widget.navigateType
                           ? null
                           : AutoRouter.of(context)
-                              .pop<Category>(categoriesData);
+                              .maybePop<Category>(categoriesData);
                     },
                   ),
                 );

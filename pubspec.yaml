@@ -7,35 +7,36 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
-  bloc: ^8.1.2
-  flutter_bloc: ^8.1.3
-  velocity_x: ^4.1.2
+  cupertino_icons: ^1.0.8
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.5
+  velocity_x: ^4.2.1
   velocity_bloc: ^1.1.4
-  shared_preferences: ^2.2.2
-  auto_route: ^7.8.4
-  google_fonts: ^6.1.0
-  dio: ^5.4.0
-  flutter_quill: ^9.3.11
+  shared_preferences: ^2.2.3
+  auto_route: ^8.1.3
+  google_fonts: ^6.2.1
+  dio: ^5.4.3
+  flutter_quill: ^9.3.21
   smooth_page_indicator: ^1.1.0
-  cached_network_image: ^3.3.0
-  flutter_widget_from_html_core: ^0.14.9
+  cached_network_image: ^3.3.1
+  flutter_widget_from_html_core: ^0.14.12
   awesome_bottom_bar: ^1.2.4
-  flutter_feather_icons: ^2.0.0+1
-  flutter_screenutil: ^5.9.0
+  flutter_feather_icons: ^2.0.0
+  flutter_screenutil: ^5.9.3
   animation_wrappers: ^3.0.0
   pretty_dio_logger: ^1.3.1
-  image_picker: ^1.0.4
+  image_picker: ^1.1.2
   flutter_localizations:
     sdk: flutter
-  i18n_extension: ^11.0.12
+  i18n_extension: ^12.0.1
   equatable: ^2.0.5
+  flutter_flavor: ^3.1.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
-  build_runner: ^2.4.7
-  auto_route_generator: ^7.3.2
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.11
+  auto_route_generator: ^8.0.0
 flutter:
   uses-material-design: true
   assets:

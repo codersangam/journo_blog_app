@@ -17,7 +17,7 @@ class AddCategoriesViewModel {
       VxToast.show(context, msg: data.message!);
       var newData = await repository.categoriesRepo.getAllCategories();
       isLoadingBloc.onUpdateData(false);
-      AutoRouter.of(context).pop<CategoriesModel>(newData);
+      AutoRouter.of(context).maybePop<CategoriesModel>(newData);
     }
   }
 }

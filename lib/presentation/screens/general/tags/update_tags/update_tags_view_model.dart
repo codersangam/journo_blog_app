@@ -18,7 +18,7 @@ class UpdateTagsViewModel {
       VxToast.show(context, msg: data.message!);
       var newData = await repository.tagsRepo.getAllTags();
       isLoadingBloc.onUpdateData(false);
-      AutoRouter.of(context).pop<TagsModel>(newData);
+      AutoRouter.of(context).maybePop<TagsModel>(newData);
     }
   }
 }
