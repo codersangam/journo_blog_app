@@ -51,9 +51,9 @@ class _ProfileState extends State<Profile> {
                   Container(
                     height: 500,
                     width: MediaQuery.sizeOf(context).width,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: MyColors.primaryColor,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(40),
                         bottomRight: Radius.circular(40),
                       ),

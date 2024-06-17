@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "DEVELOPMENT",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/development_main.dart"
+        },
+        {
+            "name": "PRODUCTION",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/production_main.dart"
+        }
+    ]
+}

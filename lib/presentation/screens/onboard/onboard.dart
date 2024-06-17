@@ -81,7 +81,7 @@ class _OnBoardState extends State<OnBoard> {
                       controller:
                           onBoardViewModel.pageController, // PageController
                       count: 3,
-                      effect: const WormEffect(
+                      effect: WormEffect(
                         activeDotColor: MyColors.primaryColor,
                         dotHeight: 12.0,
                         dotWidth: 12.0,

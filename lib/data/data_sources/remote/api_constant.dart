@@ -1,5 +1,7 @@
+import 'package:flutter_flavor/flutter_flavor.dart';
+
 class ApiConstant {
   ApiConstant._();
 
-  static const String mainUrl = "https://techblog.codersangam.com/api/";
+  static String mainUrl = FlavorConfig.instance.variables['mainUrl'];
 }

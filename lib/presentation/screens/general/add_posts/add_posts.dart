@@ -78,7 +78,7 @@ class _AddPostsState extends State<AddPosts> {
                         ).cornerRadius(20),
                   IconButton(
                     onPressed: () => addPostsViewModel.pickImage(context),
-                    icon: const Icon(
+                    icon: Icon(
                       FeatherIcons.camera,
                       color: MyColors.primaryColor,
                     ),

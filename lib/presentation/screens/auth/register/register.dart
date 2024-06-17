@@ -49,37 +49,37 @@ class _RegisterState extends State<Register> {
                         48.h.heightBox,
                         "Email".text.make(),
                         8.heightBox,
-                        const VxTextField(
+                        VxTextField(
                           fillColor: Colors.transparent,
                           borderColor: MyColors.primaryColor,
                           borderType: VxTextFieldBorderType.roundLine,
                           borderRadius: 10,
                           hint: "sundar@Journo.lifestyle",
-                          prefixIcon: Icon(Icons.email),
+                          prefixIcon: const Icon(Icons.email),
                         ),
                         20.h.heightBox,
                         "Password".text.make(),
                         8.heightBox,
-                        const VxTextField(
+                        VxTextField(
                           isPassword: true,
                           obscureText: true,
                           fillColor: Colors.transparent,
                           borderColor: MyColors.primaryColor,
                           borderType: VxTextFieldBorderType.roundLine,
                           borderRadius: 10,
-                          prefixIcon: Icon(Icons.lock),
+                          prefixIcon: const Icon(Icons.lock),
                         ),
                         20.h.heightBox,
                         "Confirm Password".text.make(),
                         8.heightBox,
-                        const VxTextField(
+                        VxTextField(
                           isPassword: true,
                           obscureText: true,
                           fillColor: Colors.transparent,
                           borderColor: MyColors.primaryColor,
                           borderType: VxTextFieldBorderType.roundLine,
                           borderRadius: 10,
-                          prefixIcon: Icon(Icons.lock),
+                          prefixIcon: const Icon(Icons.lock),
                         ),
                         40.h.heightBox,
                         Row(

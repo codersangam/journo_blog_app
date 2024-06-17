@@ -14,6 +14,7 @@ class _AuthState extends State<Auth> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
+          fit: BoxFit.cover,
           image: AssetImage(
             MyAssets.assetsImagesAuthBg,
           ),
